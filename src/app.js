@@ -1,6 +1,7 @@
 import './css/common.less';
 import './components/article/article1.xhtml'
 import './components/article/article2.xhtml'
+import './components/list.xhtml'
 
 import router from './util/router';
 router();

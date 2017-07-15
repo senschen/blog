@@ -44,7 +44,13 @@ function getArticle(num) {
     ajax.send();
 }
 function getIndex() {
-    
+    let fileName = 'list.html';
+    let ajax = new XMLHttpRequest();
+    ajax.open('get',fileName);
+    ajax.onload = function () {
+        document.getElementById('j-article').innerHTML = ajax.responseText;
+    };
+    ajax.send();
 }
 function get404() {
 
