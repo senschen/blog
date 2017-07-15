@@ -9,7 +9,7 @@ module.exports = {
         main: './src/app.js',
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, ''),
         filename: 'js/[name]-[hash].js'
     },
     module: {
@@ -42,6 +42,13 @@ module.exports = {
                 loader: 'url',
                 query: {
                     limit: 30720,
+                }
+            },
+            {
+                test: /\.(xhtml)$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].html'
                 }
             }
         ]

@@ -1,10 +1,12 @@
-import Layer from './components/layer/layer.js';
-import './css/common.css';
+import './css/common.less';
+import './components/article/article1.xhtml'
+import './components/article/article2.xhtml'
+
+import router from './util/router';
+router();
 
 const App = function () {
-    var dom = document.getElementById('app');
-    var layer = new Layer();
-    dom.innerHTML = layer.tpl;
+    let dom = document.getElementById('app');
 };
 
 new App();
